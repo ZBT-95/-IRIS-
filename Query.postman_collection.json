@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "a042e0cd-7e2a-4b4c-9ee6-7fce048ea895",
+		"name": "Query",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Query+Patient+id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "charset=utf-8",
+						"type": "text"
+					}
+				],
+				"url": "http://172.16.16.100:52773/Query/Patient/6585725"
+			},
+			"response": []
+		},
+		{
+			"name": "Query+Patient+IDcard",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://172.16.16.100:52773/Query/Patient?IDCard=433101196502082000",
+					"protocol": "http",
+					"host": [
+						"172",
+						"16",
+						"16",
+						"100"
+					],
+					"port": "52773",
+					"path": [
+						"Query",
+						"Patient"
+					],
+					"query": [
+						{
+							"key": "IDCard",
+							"value": "433101196502082000"
+						}
+					]
+				},
+				"description": "测试身份证号参数查询"
+			},
+			"response": []
+		}
+	]
+}
