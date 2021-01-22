@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="IRIS" version="26" zv="IRIS for Windows (x86-64) 2020.1 (Build 215U)" ts="2021-01-22 11:28:14">
+<Class name="Application.MSG.SQLMessage">
+<Description>
+Classname Application.MSG.SQLMessage
+Summary   查询信息+SQL模型传递模型
+Version   1.0
+Date      2021年1月20日 09:00</Description>
+<Super>Ens.Request</Super>
+<TimeChanged>65766,41275.771181</TimeChanged>
+<TimeCreated>64390,65060.014953</TimeCreated>
+
+<Parameter name="XMLNAME">
+<Default>QuerySQL</Default>
+</Parameter>
+
+<UDLText name="T">
+<Content><![CDATA[
+// 查询信息消息类
+
+]]></Content>
+</UDLText>
+
+<Property name="QueryInfo">
+<Type>Application.MSG.QueryMsg</Type>
+<Parameter name="XMLPROJECTION" value="element"/>
+</Property>
+
+<UDLText name="T">
+<Content><![CDATA[
+// 执行SQL模型
+
+]]></Content>
+</UDLText>
+
+<Property name="SqlModel">
+<Type>%String</Type>
+<Parameter name="MAXLEN" value="500"/>
+<Parameter name="XMLNAME" value="SqlModel"/>
+</Property>
+
+<Storage name="Default">
+<Type>%Storage.Persistent</Type>
+<DefaultData>SQLMessageDefaultData</DefaultData>
+<Data name="SQLMessageDefaultData">
+<Subscript>"SQLMessage"</Subscript>
+<Value name="1">
+<Value>QueryInfo</Value>
+</Value>
+<Value name="2">
+<Value>SqlModel</Value>
+</Value>
+</Data>
+</Storage>
+</Class>
+</Export>

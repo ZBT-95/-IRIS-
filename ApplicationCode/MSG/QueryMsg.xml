@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="IRIS" version="26" zv="IRIS for Windows (x86-64) 2020.1 (Build 215U)" ts="2021-01-22 11:28:08">
+<Class name="Application.MSG.QueryMsg">
+<Description>
+Classname Application.MSG.QueryMsg
+Summary   查询消息参数传递模型
+Version   1.0
+Date      2021年1月20日 09:00</Description>
+<Super>Ens.Request</Super>
+<TimeChanged>65766,41246.927362</TimeChanged>
+<TimeCreated>65063,61128.592089</TimeCreated>
+
+<Parameter name="XMLNAME">
+<Default>Query</Default>
+</Parameter>
+
+<UDLText name="T">
+<Content><![CDATA[
+// 资源名称
+
+]]></Content>
+</UDLText>
+
+<Property name="Resource">
+<Type>%String</Type>
+<Parameter name="XMLNAME" value="Resource"/>
+</Property>
+
+<UDLText name="T">
+<Content><![CDATA[
+// 查询参数集合用+拼接
+
+]]></Content>
+</UDLText>
+
+<Property name="Query_Parameters">
+<Type>%String</Type>
+<Parameter name="XMLNAME" value="Query_Parameters"/>
+</Property>
+
+<UDLText name="T">
+<Content><![CDATA[
+// 查询参数值集合用,拼接
+
+]]></Content>
+</UDLText>
+
+<Property name="Query_Values">
+<Type>%String</Type>
+<Parameter name="XMLNAME" value="Query_Values"/>
+</Property>
+
+<Storage name="Default">
+<Type>%Storage.Persistent</Type>
+<DefaultData>QueryMsgDefaultData</DefaultData>
+<Data name="QueryMsgDefaultData">
+<Subscript>"QueryMsg"</Subscript>
+<Value name="1">
+<Value>Resource</Value>
+</Value>
+<Value name="2">
+<Value>Query_Parameters</Value>
+</Value>
+<Value name="3">
+<Value>Query_Values</Value>
+</Value>
+</Data>
+</Storage>
+</Class>
+</Export>

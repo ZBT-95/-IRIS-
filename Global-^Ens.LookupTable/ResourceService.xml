@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="IRIS" version="26" zv="IRIS for Windows (x86-64) 2020.1 (Build 215U)" ts="2021-01-22 11:20:05">
+<Document name="ResourceService.LUT">
+<lookupTable>
+<entry table="ResourceService" key="Patient">患者信息查询服务BS</entry>
+</lookupTable>
+</Document></Export>

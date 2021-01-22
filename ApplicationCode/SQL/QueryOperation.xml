@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="IRIS" version="26" zv="IRIS for Windows (x86-64) 2020.1 (Build 215U)" ts="2021-01-22 11:33:46">
+<Class name="Application.SQL.BO.QueryOperation">
+<Description>
+Classname Application.SQL.BO.QueryOperation
+Summary   查询服务通用BO
+Version   1.0
+Date      2021年1月20日 09:00</Description>
+<Super>Ens.BusinessOperation</Super>
+<TimeChanged>65766,41602.768992</TimeChanged>
+<TimeCreated>65028,50588.538021</TimeCreated>
+
+<Parameter name="ADAPTER">
+<Default>EnsLib.SQL.OutboundAdapter</Default>
+</Parameter>
+
+<Property name="Adapter">
+<Type>EnsLib.SQL.OutboundAdapter</Type>
+</Property>
+
+<Parameter name="INVOCATION">
+<Default>Queue</Default>
+</Parameter>
+
+<Method name="OnMessage">
+<FormalSpec>pInput:Application.MSG.SQLMessage,*pOutput:Ens.Response</FormalSpec>
+<ReturnType>%Status</ReturnType>
+<Implementation><![CDATA[
+	Try{
+		//声明输出object实例
+		Set Outputobj = $System.OBJ.New("Application.MSG."_pInput.QueryInfo.Resource),pParms=$l(pInput.QueryInfo."Query_Parameters","+")-1
+		//对查询信息执行语句进行分析
+		Set Result=##class(EnsLib.SQL.Snapshot).%New(),k=1
+		For i=1:1:pParms{
+			Set pParms(i)=$p(pInput.QueryInfo."Query_Values",",",i)
+		}
+		//查询服务信息
+		Set tSC=..Adapter.ExecuteQueryParmArray(.Result,pInput.SqlModel,.pParms)
+		//获取返回条数及列数
+		Set Count=Result.RowCountGet(),ColumnCount=Result.GetColumnCount()
+		$$$TRACE("Count"_Count)
+		FOR j=1:1:Count{
+			FOR i=1:1:ColumnCount{
+				//获取具体列名
+				Set Name=Result.GetColumnName(i)
+				//获取具体列对应值
+				Set Value=Result.Get(Name,j)
+				//为模型赋值
+				Set $PROPERTY(Outputobj,$REPLACE(Name,"_",""))=Value
+				}
+			}
+		Set pOutput=Outputobj
+	}Catch(ex){	
+			$$$LOGERROR(ex.DisplayString())
+	}
+	Quit $$$OK
+]]></Implementation>
+</Method>
+
+<XData name="MessageMap">
+<Data><![CDATA[
+<MapItems>
+	<MapItem MessageType="Application.MSG.SQLMessage"> 
+		<Method>OnMessage</Method>
+	</MapItem>
+</MapItems>
+]]></Data>
+</XData>
+</Class>
+</Export>
