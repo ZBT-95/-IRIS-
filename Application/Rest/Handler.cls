@@ -1,34 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Export generator="IRIS" version="26" zv="IRIS for Windows (x86-64) 2020.1 (Build 215U)" ts="2021-01-22 11:30:51">
-<Class name="Application.Rest.Handler">
-<Description>
-Classname Application.Rest.Handler
-Summary   REST应用插叙参数处理程序
-Version   1.0
-Date      2021年1月20日 09:00</Description>
-<Super>%CSP.REST</Super>
-<TimeChanged>65766,40124.037733</TimeChanged>
-<TimeCreated>65468,76524.400479</TimeCreated>
+/// Classname Application.Rest.Handler
+/// Summary   REST应用插叙参数处理程序
+/// Version   1.0
+/// Date      2021年1月20日 09:00
+Class Application.Rest.Handler Extends %CSP.REST
+{
 
-<Parameter name="HandleCorsRequest">
-<Default>true</Default>
-</Parameter>
+Parameter HandleCorsRequest = "true";
 
-<XData name="UrlMap">
-<XMLNamespace>http://www.bjgoodwill.com/urlmap</XMLNamespace>
-<Data><![CDATA[
+XData UrlMap [ XMLNamespace = "http://www.bjgoodwill.com/urlmap" ]
+{
 <Routes>
 <Route Url="/:resource/:id"  			Method="GET" 		Call="GetRequest"/>
 <Route Url="/(.*)"  					Method="GET" 		Call="GetRequestParameter"/>
 </Routes>
-]]></Data>
-</XData>
+}
 
-<Method name="GetRequest">
-<ClassMethod>1</ClassMethod>
-<FormalSpec>resource:%String,id:%String</FormalSpec>
-<ReturnType>%Status</ReturnType>
-<Implementation><![CDATA[
+ClassMethod GetRequest(resource As %String, id As %String) As %Status
+{
 	//使用#Dim预处理程序指令
 	#dim tSC As %Status = $$$OK
 	Try {
@@ -47,14 +35,10 @@ Date      2021年1月20日 09:00</Description>
 	}
 	
 	Quit tSC
-]]></Implementation>
-</Method>
+}
 
-<Method name="GetRequestParameter">
-<ClassMethod>1</ClassMethod>
-<FormalSpec>resource:%String</FormalSpec>
-<ReturnType>%Status</ReturnType>
-<Implementation><![CDATA[
+ClassMethod GetRequestParameter(resource As %String) As %Status
+{
 	//使用#Dim预处理程序指令
 	#Dim tSC As %Status = $$$OK
 	Try {
@@ -75,7 +59,6 @@ Date      2021年1月20日 09:00</Description>
 	}
 	
 	Quit tSC
-]]></Implementation>
-</Method>
-</Class>
-</Export>
+}
+
+}

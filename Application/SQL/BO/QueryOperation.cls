@@ -1,31 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Export generator="IRIS" version="26" zv="IRIS for Windows (x86-64) 2020.1 (Build 215U)" ts="2021-01-22 11:33:46">
-<Class name="Application.SQL.BO.QueryOperation">
-<Description>
-Classname Application.SQL.BO.QueryOperation
-Summary   查询服务通用BO
-Version   1.0
-Date      2021年1月20日 09:00</Description>
-<Super>Ens.BusinessOperation</Super>
-<TimeChanged>65766,41602.768992</TimeChanged>
-<TimeCreated>65028,50588.538021</TimeCreated>
+/// Classname Application.SQL.BO.QueryOperation
+/// Summary   查询服务通用BO
+/// Version   1.0
+/// Date      2021年1月20日 09:00
+Class Application.SQL.BO.QueryOperation Extends Ens.BusinessOperation
+{
 
-<Parameter name="ADAPTER">
-<Default>EnsLib.SQL.OutboundAdapter</Default>
-</Parameter>
+Parameter ADAPTER = "EnsLib.SQL.OutboundAdapter";
 
-<Property name="Adapter">
-<Type>EnsLib.SQL.OutboundAdapter</Type>
-</Property>
+Property Adapter As EnsLib.SQL.OutboundAdapter;
 
-<Parameter name="INVOCATION">
-<Default>Queue</Default>
-</Parameter>
+Parameter INVOCATION = "Queue";
 
-<Method name="OnMessage">
-<FormalSpec>pInput:Application.MSG.SQLMessage,*pOutput:Ens.Response</FormalSpec>
-<ReturnType>%Status</ReturnType>
-<Implementation><![CDATA[
+Method OnMessage(pInput As Application.MSG.SQLMessage, Output pOutput As Ens.Response) As %Status
+{
 	Try{
 		//声明输出object实例
 		Set Outputobj = $System.OBJ.New("Application.MSG."_pInput.QueryInfo.Resource),pParms=$l(pInput.QueryInfo."Query_Parameters","+")-1
@@ -54,17 +41,15 @@ Date      2021年1月20日 09:00</Description>
 			$$$LOGERROR(ex.DisplayString())
 	}
 	Quit $$$OK
-]]></Implementation>
-</Method>
+}
 
-<XData name="MessageMap">
-<Data><![CDATA[
+XData MessageMap
+{
 <MapItems>
 	<MapItem MessageType="Application.MSG.SQLMessage"> 
 		<Method>OnMessage</Method>
 	</MapItem>
 </MapItems>
-]]></Data>
-</XData>
-</Class>
-</Export>
+}
+
+}
