@@ -26,7 +26,8 @@ https://docs.intersystems.com/irislatest/csp/docbook/Doc.View.cls?KEY=PAGE_multi
 应用：
 在整个交互过程中，直接操纵InterSystems IRIS对象。ObjectScript类定义通常用作创建对象（例如患者，科室或医护人员）的模板。
 
-2. 建立应用案例（此应用程序以患者为例）
+2.建立应用案例（此应用程序以患者为例）
+
 2.1应用搭建：
 2.1.2基本环境
 IRIS版本信息：IRIS for Windows (x86-64) 2020.1 (Build 215U) Mon Mar 30 2020 20:14:33 EDT [HealthConnect:2.1.0]
