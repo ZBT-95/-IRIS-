@@ -26,7 +26,7 @@ https://docs.intersystems.com/irislatest/csp/docbook/Doc.View.cls?KEY=PAGE_multi
 应用：
 在整个交互过程中，直接操纵InterSystems IRIS对象。ObjectScript类定义通常用作创建对象（例如患者，科室或医护人员）的模板。
 
-2.	建立应用案例（此应用程序以患者为例）
+2. 建立应用案例（此应用程序以患者为例）
 2.1应用搭建：
 2.1.2基本环境
 IRIS版本信息：IRIS for Windows (x86-64) 2020.1 (Build 215U) Mon Mar 30 2020 20:14:33 EDT [HealthConnect:2.1.0]
@@ -46,8 +46,10 @@ Global-^Ens.LookupTable中查找表文件导入
 
 2.2应用流程
 略（见PDF）
+
 2.3应用测试
 可采用Postman工具（其他工具也可以）进行测试验证
 Postman可导入Query.postman_collection.json，更改IP、端口号信息、URL进行测试。
+
 2.4应用总结
 本应用程序以查询患者服务为案例，可进行入站出站协议、查询条件、业务类型都可进行配置丰富实现，来解决查询业务接口问题。
