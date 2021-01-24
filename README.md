@@ -54,3 +54,111 @@ Postman可导入Query.postman_collection.json，更改IP、端口号信息、URL
 
 2.4应用总结
 本应用程序以查询患者服务为案例，可进行入站出站协议、查询条件、业务类型都可进行配置丰富实现，来解决查询业务接口问题。
+Integration of hospital information query business solutions using inter systems iris data platform with built-in multiple models
+
+summary:
+
+With the gradual improvement of hospital information construction, there are more and more hospital subsystems, and more and more interfaces between systems. At the same time, the interface cost is increasing, and the management work is becoming more and more complex. Among them, the number of query business interfaces is gradually increasing according to the business type differentiation, which brings problems such as large amount of interfaces, heavy development work, code redundancy, difficult maintenance and so on. In view of this dilemma, we use InterSystems iris data platform built-in multi model integration of hospital information query business solutions. The application can be configured to complete the query business interface implementation, greatly reducing the key operation cycle of development, maintenance, implementation and other projects.
+
+Key applications: iris, rest API, ObjectScript, globals, SQL, data lookup tables
+
+Application model and Application Introduction:
+
+
+
+1. Using the model
+
+1.1. Globals (key-value)
+
+Globals is a sparse multidimensional array that can be stored and managed in iris database. You can use ObjectScript and native APIs to work with globals.
+
+Tools:
+
+https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GGBL_ MANAGING
+
+Application:
+
+According to the key value pair of globals, the application program has the characteristics of fast access speed. It is applied in the rest dispatch class and BP process management of this program, which solves the problem of frequent value taking, slow speed and configuration operation on the front page of the lookup table, such as storing SQL model, service configuration information and so on.
+1.2. SQL access
+
+InterSystems iris provides SQL access to data through ObjectScript, rest API and JDBC
+
+Tools:
+
+https://docs.intersystems.com/irislatest/csp/docbook/Doc.View.cls?KEY=GSQL_ smp
+
+Application:
+
+In the query business, the three-party system does not cooperate with the interface transformation, which leads to the difficulty of interface implementation. At this time, we use iris embedded model ObjectScript, rest API and JDBC to realize SQL access to data and establish business interface.
+
+
+
+1.3. Object access
+
+Through ObjectScript and rest API, InterSystems iris provides a way to store and change object instances in globals.
+
+file:
+
+https://docs.intersystems.com/irislatest/csp/docbook/Doc.View.cls?KEY=PAGE_ multimodel_ object
+
+Application:
+
+During the whole interaction process, the InterSystems iris object is manipulated directly. ObjectScript class definitions are often used as templates for creating objects such as patients, departments, or healthcare workers.
+
+
+
+2. Establish application cases (this application takes patients as an example)
+
+
+
+2.1 application construction:
+
+2.1.2 basic environment
+
+Iris version information: iris for windows (x86-64) 2020.1 (build 215u) mon Mar 30 2020 20:14:33 EDT [heal thConnect:2.1.0 ]
+
+Iris has java and JDBC environment
+
+Postman can be used for testing
+
+2.1.2 installation steps
+
+① Establish rest Service
+
+New web application → configure dispatch class → configure permission.
+
+This step can be seen in the following pictures: application running / webreplication (query). PNG and webreplication (role). PNG
+
+② Configure sql-jdbc
+
+Establish SQL connection, connect to test database mysql, import test jhip_ patient_ info.sql
+
+③ Configuration lookup table
+
+Global-^ Ens.LookupTable Look up table file import in
+
+④ Import code
+
+Import the code in applicationcode, compile and open production,
+
+Note: modify Bo configuration information (DNS), configure Java gateway, etc
+
+
+
+2.2 application process
+
+Omitted (see PDF)
+
+
+
+2.3 Application Test
+
+The postman tool (or other tools) can be used for test verification
+
+Postman can import Query.postman_ collection.json , change IP, port number information and URL for testing.
+
+
+
+2.4 application summary
+
+This application takes patient service query as a case, which can be configured with inbound and outbound protocols, query conditions and business types to solve the problem of query business interface.
