@@ -12,18 +12,27 @@
     https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GGBL_MANAGING   
     **应用：**   
     应用程序根据Globals的键值对、访问速度快的特性。应用在本次程序的Rest分派类与BP流程管理中取值应用，解决了频繁取值速度慢、实现在查找表前端页面配置操作，如：存储了SQL模型、服务配置信息等等。    
+    应用模型链接
+    https://github.com/ZBT-95/-IRIS-/blob/main/Application/Rest/Handler.cls
+    https://github.com/ZBT-95/-IRIS-/blob/main/Application/BP/QueryManage.cls
     2. SQL访问  
     InterSystems IRIS通过 ObjectScript、REST API及JDBC提供对数据的SQL访问.   
     **工具:**   
     https://docs.intersystems.com/irislatest/csp/docbook/Doc.View.cls?KEY=GSQL_smp   
     **应用：**   
     在查询业务中，三方系统不配合接口改造，导致接口实现困难问题。此时，我们采用IRIS内嵌模型ObjectScript、REST API及JDBC来实现对数据的SQL访问，来建立业务接口。  
+    应用模型链接
+    https://github.com/ZBT-95/-IRIS-/blob/main/Application/SQL/BO/Query.cls
     3. Object访问   
     通过ObjectScript、REST API，InterSystems IRIS提供了在Globals 存储和更改对象实例的途径。   
     **文档：**   
     https://docs.intersystems.com/irislatest/csp/docbook/Doc.View.cls?KEY=PAGE_multimodel_object   
     **应用：**   
-    在整个交互过程中，直接操纵InterSystems IRIS对象。ObjectScript类定义通常用作创建对象（例如患者，科室或医护人员）的模板。   
+    在整个交互过程中，直接操纵InterSystems IRIS对象。ObjectScript类定义通常用作创建对象（例如患者，科室或医护人员）的模板。  
+    应用模型链接
+    https://github.com/ZBT-95/-IRIS-/blob/main/Application/MSG/Patient.cls
+    https://github.com/ZBT-95/-IRIS-/blob/main/Application/MSG/QueryMsg.cls
+    https://github.com/ZBT-95/-IRIS-/blob/main/Application/MSG/SQLMessage.cls
 2. 建立应用案例（此应用程序以患者为例）  
     1. 应用搭建：  
         1. 基本环境   
@@ -66,18 +75,27 @@ Key applications: IRIS, Rest API, ObjectScript, Globals, SQL, data lookup tables
     https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls?KEY=GGBL_MANAGING   
     **Application:**  
     According to the key value pair of globals, the application program has the characteristics of fast access speed. It is applied in the rest dispatch class and BP process management of this program, which solves the problem of frequent value taking, slow speed and configuration operation on the front page of the lookup table, such as storing SQL model, service configuration information and so on.   
+   The application uses model linking
+   https://github.com/ZBT-95/-IRIS-/blob/main/Application/Rest/Handler.cls
+    https://github.com/ZBT-95/-IRIS-/blob/main/Application/BP/QueryManage.cls
     2. SQL access   
     InterSystems iris provides SQL access to data through ObjectScript, rest API and JDBC   
     **Tools:**   
     https://docs.intersystems.com/irislatest/csp/docbook/Doc.View.cls?KEY=GSQL_smp   
     **Application:**   
-    In the query business, the three-party system does not cooperate with the interface transformation, which leads to the difficulty of interface implementation. At this time, we use iris embedded model ObjectScript, rest API and JDBC to realize SQL access to data and establish business interface.   
+    In the query business, the three-party system does not cooperate with the interface transformation, which leads to the difficulty of interface implementation. At this time, we use iris embedded model ObjectScript, rest API and JDBC to realize SQL access to data and establish business interface.  
+    The application uses model linking
+     https://github.com/ZBT-95/-IRIS-/blob/main/Application/SQL/BO/Query.cls
     3. Object access   
     Through ObjectScript and rest API, InterSystems iris provides a way to store and change object instances in globals.   
     **File:**   
     https://docs.intersystems.com/irislatest/csp/docbook/Doc.View.cls?KEY=PAGE_multimodel_object   
     **Application:**   
     During the whole interaction process, the InterSystems iris object is manipulated directly. ObjectScript class definitions are often used as templates for creating objects such as patients, departments, or healthcare workers.   
+    The application uses model linking
+    https://github.com/ZBT-95/-IRIS-/blob/main/Application/MSG/Patient.cls
+    https://github.com/ZBT-95/-IRIS-/blob/main/Application/MSG/QueryMsg.cls
+    https://github.com/ZBT-95/-IRIS-/blob/main/Application/MSG/SQLMessage.cls
 2. Establish application cases (this application takes patients as an example)   
     1. application construction:   
         1. basic environment   
