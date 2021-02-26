@@ -14,12 +14,21 @@ XData ProductionDefinition
     <Setting Target="Host" Name="TargetConfigNames">信息查询流程BP</Setting>
   </Item>
   <Item Name="信息查询SQL服务BO" Category="查询服务管理" ClassName="Application.SQL.BO.QueryOperation" PoolSize="1" Enabled="true" Foreground="false" Comment="患者信息服务BO" LogTraceEvents="true" Schedule="">
-    <Setting Target="Adapter" Name="DSN">JDBCJH</Setting>
+    <Setting Target="Adapter" Name="DSN">JDBCMY</Setting>
     <Setting Target="Adapter" Name="JGService">JavaGateway服务</Setting>
   </Item>
   <Item Name="JavaGateway服务" Category="查询服务管理" ClassName="EnsLib.JavaGateway.Service" PoolSize="1" Enabled="true" Foreground="false" Comment="JavaGateway服务" LogTraceEvents="false" Schedule="">
+    <Setting Target="Host" Name="Port">55556</Setting>
   </Item>
   <Item Name="信息查询流程BP" Category="查询服务管理" ClassName="Application.BP.QueryManage" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
+  </Item>
+  <Item Name="测试服务HTTP" Category="查询服务管理" ClassName="JHIPLIB.HTTP.BO.JHIPBaseBO" PoolSize="1" Enabled="true" Foreground="false" Comment="" LogTraceEvents="false" Schedule="">
+  </Item>
+  <Item Name="卫生机构信息查询服务BS" Category="查询服务管理" ClassName="Application.SOAP.BS.QueryService" PoolSize="0" Enabled="true" Foreground="false" Comment="患者查询服务" LogTraceEvents="true" Schedule="">
+    <Setting Target="Host" Name="TargetConfigNames">信息查询流程BP</Setting>
+  </Item>
+  <Item Name="医护信息查询服务BS" Category="查询服务管理" ClassName="Application.SOAP.BS.QueryService" PoolSize="0" Enabled="true" Foreground="false" Comment="患者查询服务" LogTraceEvents="true" Schedule="">
+    <Setting Target="Host" Name="TargetConfigNames">信息查询流程BP</Setting>
   </Item>
 </Production>
 }

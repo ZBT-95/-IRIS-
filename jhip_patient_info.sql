@@ -1,7 +1,7 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 我的MYSQL
+Source Server         : localhost
 Source Server Version : 80021
 Source Host           : localhost:3306
 Source Database       : 测试
@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 80021
 File Encoding         : 65001
 
-Date: 2021-01-23 10:26:53
+Date: 2021-02-26 14:08:01
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -80,4 +80,4 @@ CREATE TABLE `jhip_patient_info` (
 -- ----------------------------
 -- Records of jhip_patient_info
 -- ----------------------------
-INSERT INTO `jhip_patient_info` VALUES ('1', '21d6e7a04b3743e38d1cdcc80ae705f3', '658**25', '', '', '', '', '', '李琴娥', '', 'F', '2019-02-01', 'PN', '4331011*****000', '', '湖南省吉首市***2组', '', '', '湖南省', '416000', '', '', '', '', '', '', '', '', '', '中国', '', '', '', '', '', '', '', '', '', '2021-01-23 16:25:49', '2021-01-23 17:20:11', '', '0', '', '', '', '1', '1', '');
+INSERT INTO `jhip_patient_info` VALUES ('1', '21d6e7a04b3743e38d1cdcc80ae705f3', '658**25', '', '', '', '', '', '李琴娥', '', 'F', '2019-02-01', 'PN', '433101196502082000', '', '湖南省吉首市***2组', '', '', '湖南省', '416000', '', '', '', '', '', '', '', '', '', '中国', '', '', '', '', '', '', '', '', '', '2021-01-23 16:25:49', '2021-01-23 17:20:11', '', '0', '', '', '', '1', '1', '');

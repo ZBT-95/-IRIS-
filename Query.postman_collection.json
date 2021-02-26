@@ -1,8 +1,8 @@
 {
 	"info": {
-		"_postman_id": "a042e0cd-7e2a-4b4c-9ee6-7fce048ea895",
+		"_postman_id": "ba2735bf-e319-4214-a9f7-a774a90f023d",
 		"name": "Query",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
@@ -16,7 +16,19 @@
 						"type": "text"
 					}
 				],
-				"url": "http://172.16.16.100:52773/Query/Patient/6585725"
+				"url": {
+					"raw": "http://localhost:52773/Query/Patient/6585725",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "52773",
+					"path": [
+						"Query",
+						"Patient",
+						"6585725"
+					]
+				}
 			},
 			"response": []
 		},
@@ -26,13 +38,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://172.16.16.100:52773/Query/Patient?IDCard=433101196502082000",
+					"raw": "http://localhost:52773/Query/Patient?IDCard=433101196502082000",
 					"protocol": "http",
 					"host": [
-						"172",
-						"16",
-						"16",
-						"100"
+						"localhost"
 					],
 					"port": "52773",
 					"path": [
@@ -47,6 +56,69 @@
 					]
 				},
 				"description": "测试身份证号参数查询"
+			},
+			"response": []
+		},
+		{
+			"name": "Query+Dept+Code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:52773/Query/Dept?Code=1010000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "52773",
+					"path": [
+						"Query",
+						"Dept"
+					],
+					"query": [
+						{
+							"key": "Code",
+							"value": "1010000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Query+Doctor+Name",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml;charset=UTF-8",
+						"type": "text"
+					},
+					{
+						"key": "charset",
+						"value": "UTF-8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:52773/Query/Doctor?Name=Dr.Li",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "52773",
+					"path": [
+						"Query",
+						"Doctor"
+					],
+					"query": [
+						{
+							"key": "Name",
+							"value": "Dr.Li"
+						}
+					]
+				}
 			},
 			"response": []
 		}

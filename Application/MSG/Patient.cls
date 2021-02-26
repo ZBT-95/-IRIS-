@@ -31,11 +31,11 @@ Property contactrelation2 As %String(MAXLEN = 45);
 
 Property countrycode As %String;
 
-Property createdate As %TimeStamp;
+Property createdate As %String;
 
-Property dateofbirth As %Date;
+Property dateofbirth As %String;
 
-Property deathdate As %Date;
+Property deathdate As %String;
 
 Property deathid As %String;
 
@@ -91,7 +91,7 @@ Property pyname As %String;
 
 Property register As %String;
 
-Property removed As %TimeStamp;
+Property removed As %String;
 
 Property sex As %String;
 
@@ -99,7 +99,7 @@ Property streetaddress As %String;
 
 Property suppliersystemid As %String;
 
-Property updated As %TimeStamp;
+Property updated As %String;
 
 Property zone As %String;
 
