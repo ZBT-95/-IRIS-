@@ -49,8 +49,8 @@
     通过JDBC方式链接数据库，进行查询业务消息。      
      **应用链接**   
     https://github.com/ZBT-95/-IRIS-/blob/main/Application/SQL/BO/Query.cls   
-    https://github.com/ZBT-95/-IRIS-/blob/main/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E6%83%85%E5%86%B5/JDBC%E5%BA%94%E7%94%A8.png   
-    https://github.com/ZBT-95/-IRIS-/blob/main/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E6%83%85%E5%86%B5/JDBC%E9%85%8D%E7%BD%AE.png   
+    ![](https://raw.githubusercontent.com/ZBT-95/-IRIS-/main/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E6%83%85%E5%86%B5/JDBC%E5%BA%94%E7%94%A8.png)   
+    ![](https://raw.githubusercontent.com/ZBT-95/-IRIS-/main/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E6%83%85%E5%86%B5/JDBC%E9%85%8D%E7%BD%AE.png)   
     7. 互操作性适配器   
     利用SQL、SOAP等入站出站适配器完成应用程序业务消息交互。      
      **应用链接**   
@@ -60,7 +60,7 @@
     利用Production来详细说明业务流程，保证业务消息规范交互。   
      **应用链接**   
     https://github.com/ZBT-95/-IRIS-/blob/main/Application/PD/QueryProduction.cls   
-    https://github.com/ZBT-95/-IRIS-/blob/main/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E6%83%85%E5%86%B5/Production.png   
+    ![](https://raw.githubusercontent.com/ZBT-95/-IRIS-/main/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E6%83%85%E5%86%B5/Production.png)   
 
 2. 建立应用案例（此应用程序以患者为例）  
     1. 应用搭建：  
@@ -143,8 +143,8 @@ Key applications: iris, rest API, ObjectScript, globals, SQL, data lookup tables
     The database is linked through JDBC to query business messages.         
      **The application uses model linking**   
     https://github.com/ZBT-95/-IRIS-/blob/main/Application/SQL/BO/Query.cls   
-    https://github.com/ZBT-95/-IRIS-/blob/main/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E6%83%85%E5%86%B5/JDBC%E5%BA%94%E7%94%A8.png   
-    https://github.com/ZBT-95/-IRIS-/blob/main/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E6%83%85%E5%86%B5/JDBC%E9%85%8D%E7%BD%AE.png   
+    ![](https://raw.githubusercontent.com/ZBT-95/-IRIS-/main/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E6%83%85%E5%86%B5/JDBC%E5%BA%94%E7%94%A8.png)   
+    ![](https://raw.githubusercontent.com/ZBT-95/-IRIS-/main/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E6%83%85%E5%86%B5/JDBC%E9%85%8D%E7%BD%AE.png)   
     7. Interoperability adapter   
     Using SQL, soap and other inbound and outbound adapters to complete the application business message interaction.      
      **The application uses model linking**   
@@ -154,7 +154,7 @@ Key applications: iris, rest API, ObjectScript, globals, SQL, data lookup tables
     Use production to explain the business process in detail, and ensure the interaction of business messages.   
      **The application uses model linking**   
     https://github.com/ZBT-95/-IRIS-/blob/main/Application/PD/QueryProduction.cls   
-    https://github.com/ZBT-95/-IRIS-/blob/main/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E6%83%85%E5%86%B5/Production.png   
+    ![](https://raw.githubusercontent.com/ZBT-95/-IRIS-/main/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E6%83%85%E5%86%B5/Production.png)   
 
 2. Establish application cases (this application takes patients as an example)   
     1. application construction:   
