@@ -3,7 +3,7 @@
 ### 概述：
 随着医院信息化建设的逐步完善，医院子系统越来越多，系统间接口越来越多，同时接口费用不断增加，管理工作变得越来越复杂。其中，查询类业务接口根据业务类型分化，数量也是逐步递增，带来接口量大、开发工作繁重、代码冗余、维护困难等等问题。针对这一困境，我们基于Intersystems IRIS数据平台整合医院信息查询业务解决方案。该应用程序可通过配置完成查询业务接口实现，大大缩小开发、维护、实施等项目关键运转周期。
 
-关键应用：IRIS、REST API、ObjectScript、Globals 、SQL、DATA LOOKUP TABLES、JDBC、BPL
+关键应用：IRIS、REST API、ObjectScript、Globals 、SQL、DATA LOOKUP TABLES、JDBC、BPL、Model
 
 ### 技术细则及应用介绍：
 1. 技术细则
@@ -61,7 +61,12 @@
      **应用链接**   
     https://github.com/ZBT-95/-IRIS-/blob/main/Application/PD/QueryProduction.cls   
     ![](https://raw.githubusercontent.com/ZBT-95/-IRIS-/main/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E6%83%85%E5%86%B5/Production.png)   
-
+    9. Model   
+    程序中具有自建立模型引用.比如：患者、医护、科室模型   
+      **应用链接**    
+    https://github.com/ZBT-95/-IRIS-/blob/main/Application/MSG/Dept.cls   
+    https://github.com/ZBT-95/-IRIS-/blob/main/Application/MSG/Doctor.cls   
+    https://github.com/ZBT-95/-IRIS-/blob/main/Application/MSG/Patient.cls   
 2. 建立应用案例（此应用程序以患者为例）  
     1. 应用搭建：  
         1. 基本环境   
@@ -155,7 +160,13 @@ Key applications: iris, rest API, ObjectScript, globals, SQL, data lookup tables
      **The application uses model linking**   
     https://github.com/ZBT-95/-IRIS-/blob/main/Application/PD/QueryProduction.cls   
     ![](https://raw.githubusercontent.com/ZBT-95/-IRIS-/main/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E6%83%85%E5%86%B5/Production.png)   
-
+    9. Model  
+    There are self built model references in the program.  For example: patient, health care, department model.  
+    **The application uses model linking*    
+    https://github.com/ZBT-95/-IRIS-/blob/main/Application/MSG/Dept.cls   
+    https://github.com/ZBT-95/-IRIS-/blob/main/Application/MSG/Doctor.cls   
+    https://github.com/ZBT-95/-IRIS-/blob/main/Application/MSG/Patient.cls 
+    
 2. Establish application cases (this application takes patients as an example)   
     1. application construction:   
         1. basic environment   
