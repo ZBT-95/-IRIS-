@@ -71,7 +71,8 @@
     1. 应用搭建：  
         1. 基本环境   
         IRIS版本信息：IRIS for Windows (x86-64) 2020.1 (Build 215U) Mon Mar 30 2020 20:14:33 EDT \[HealthConnect:2.1.0]   
-        IRIS具有JAVA、JDBC环境   
+        IRIS具有JAVA、JDBC环境
+        搭建命名空间
         可采用PostMan进行测试    
         2. 安装步骤   
         ① 建立Rest服务   
@@ -168,10 +169,11 @@ Key applications: iris, rest API, ObjectScript, globals, SQL, data lookup tables
     https://github.com/ZBT-95/-IRIS-/blob/main/Application/MSG/Patient.cls 
     
 2. Establish application cases (this application takes patients as an example)   
-    1. application construction:   
+    1. Installation:   
         1. basic environment   
         Iris version information: iris for windows (x86-64) 2020.1 (build 215u) mon Mar 30 2020 20:14:33 EDT \[Health Connect:2.1.0]   
-        Iris has java and JDBC environment   
+        Iris has java and JDBC environment 
+        Build a namespace
         Postman can be used for testing   
         2. installation steps   
         ① Establish rest Service   
@@ -186,7 +188,7 @@ Key applications: iris, rest API, ObjectScript, globals, SQL, data lookup tables
         Note: modify Bo configuration information (DNS), configure Java gateway, etc   
     2. application process   
     Omitted (see PDF)   
-    3. Application Test   
+    3. How to Test it   
     The postman tool (or other tools) can be used for test verification   
     Postman can import Query.postman_ collection.json , change IP, port number information and URL for testing.   
     4. application summary   
